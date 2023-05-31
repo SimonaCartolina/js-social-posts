@@ -98,7 +98,8 @@ posts.forEach(function(card) {
 
     // Crea gli elementi interni per il contenuto della card
     let titleElement = document.createElement("h1");
-    titleElement.textContent = card.name;
+    titleElement.textContent = card.author;
+    titleElement.classList.add('post-meta__author')
     titleElement.classList.add('post-meta__author')
     let descriptionElement = document.createElement("p");
     descriptionElement.classList.add('post__text');

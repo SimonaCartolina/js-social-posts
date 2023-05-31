@@ -128,14 +128,10 @@ h1 {
     color: #0CD977;
     cursor: default;
 }
-div.card{
-    background-color: white;
-    height: 550.4px;
-    width:600px;
-}
 .scoreimg{
     width:568px;
     height:284px;
     object-fit:cover;
+    margin-bottom: 16px;
 
 }
