@@ -55,3 +55,27 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+
+/*Milestone 1
+Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed.*/
+
+
+
+/*Milestone 2
+Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo.
+Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.*/
+
+/*prendo il bottone
+
+faccio un add event listener sul bottone
+
+al clicco del bottone, il bottone diventa rosso
+
+*/
+
+let likeButton=document.querySelector('a.like-button');
+
+likeButton.addEventListener('click', function(){
+    likeButton.style.color='red';
+});
