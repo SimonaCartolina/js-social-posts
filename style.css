@@ -133,7 +133,7 @@ div.card{
     height: 550.4px;
     width:600px;
 }
-div.card img{
+.scoreimg{
     width:568px;
     height:284px;
     object-fit:cover;

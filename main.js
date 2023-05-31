@@ -106,6 +106,7 @@ posts.forEach(function(card) {
     descriptionElement.textContent = card.content;
     let imageElement = document.createElement("img");
     imageElement.src = card.media;
+    imageElement.classList.add('scoreimg');
 
     // Aggiungi gli elementi interni alla card
     cardElement.appendChild(titleElement);
