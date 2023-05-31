@@ -66,7 +66,7 @@ Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i 
 Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo.
 Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.*/
 
-/*prendo il bottone
+/*1)  Prendo il bottone
 
 faccio un add event listener sul bottone
 
@@ -77,7 +77,7 @@ al clicco del bottone, il bottone diventa rosso
 let likeButton=document.querySelector('a.like-button');
 let likeCounter=parseInt(document.getElementById('like-counter-1').textContent);
 
-/*prendo il bottone like
+/*2)  Prendo il bottone like
 prendo il bottone counter like
 faccio un add event listener sul bottone like
 quando lo clicco, il counter like diventa quello che è adesso + 1*/
@@ -85,10 +85,33 @@ quando lo clicco, il counter like diventa quello che è adesso + 1*/
 likeButton.addEventListener('click', function(){
     likeButton.style.color='red';
 
-likeCounter++;
-document.getElementById('like-counter-1').textContent = likeCounter;
-
-
+    likeCounter++;
+    document.getElementById('like-counter-1').textContent = likeCounter;
 });
 
+let container=document.getElementById('container');
 
+posts.forEach(function(card) {
+    // Crea un elemento HTML per la card
+    let cardElement = document.createElement("div");
+    cardElement.classList.add("post");
+
+    // Crea gli elementi interni per il contenuto della card
+    let titleElement = document.createElement("h1");
+    titleElement.textContent = card.name;
+    titleElement.classList.add('post-meta__author')
+    let descriptionElement = document.createElement("p");
+    descriptionElement.classList.add('post__text');
+
+    descriptionElement.textContent = card.content;
+    let imageElement = document.createElement("img");
+    imageElement.src = card.image;
+
+    // Aggiungi gli elementi interni alla card
+    cardElement.appendChild(titleElement);
+    cardElement.appendChild(descriptionElement);
+    cardElement.appendChild(imageElement);
+
+    // Aggiungi la card al contenitore
+    container.appendChild(cardElement);
+});

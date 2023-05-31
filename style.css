@@ -92,6 +92,11 @@ h1 {
 .post__image {
     margin-bottom: 16px;
 }
+.div .post{
+    background-color: white;
+    height: 550.4px;
+    width:600px;
+}
 
 .post__image img {
     width: 100%;
@@ -122,4 +127,15 @@ h1 {
 .like-button--liked {
     color: #0CD977;
     cursor: default;
+}
+div.card{
+    background-color: white;
+    height: 550.4px;
+    width:600px;
+}
+div.card img{
+    width:568px;
+    height:284px;
+    object-fit:cover;
+
 }
