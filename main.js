@@ -75,7 +75,20 @@ al clicco del bottone, il bottone diventa rosso
 */
 
 let likeButton=document.querySelector('a.like-button');
+let likeCounter=parseInt(document.getElementById('like-counter-1').textContent);
+
+/*prendo il bottone like
+prendo il bottone counter like
+faccio un add event listener sul bottone like
+quando lo clicco, il counter like diventa quello che è adesso + 1*/
 
 likeButton.addEventListener('click', function(){
     likeButton.style.color='red';
+
+likeCounter++;
+document.getElementById('like-counter-1').textContent = likeCounter;
+
+
 });
+
+
